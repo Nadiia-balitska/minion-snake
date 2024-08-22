@@ -30,7 +30,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
 }
 
@@ -60,7 +60,7 @@ img {
   margin: 0 auto;
   padding: 40px 14px;
 
-  @include media($desktop) {
+  @include media(desktop) {
     padding: 80px 60px;
     max-width: 1440px;
   }
