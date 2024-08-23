@@ -1,9 +1,11 @@
 .header {
   border-bottom: 1px solid #e9e8e4;
+  margin: 0 auto;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   display: flex;
   z-index: 999;
-  margin: 0 auto;
 }
 
 .header-desktop {
