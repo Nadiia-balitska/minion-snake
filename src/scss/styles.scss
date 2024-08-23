@@ -1,12 +1,12 @@
 @import './header.scss';
+@import './hero.scss';
+@import './benefits.scss';
+@import './gallery.scss';
 @import './about.scss';
 @import './advanteges.scss';
-@import './benefits.scss';
 @import './faq.scss';
 @import './footer.scss';
-@import './gallery.scss';
 @import './header.scss';
-@import './hero.scss';
 @import './howToPlay.scss';
 @import './policy.scss';
 @import './terms.scss';
@@ -63,5 +63,21 @@ img {
   @include media(desktop) {
     padding: 80px 60px;
     max-width: 1440px;
+  }
+}
+
+.title {
+  padding-bottom: 28px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #003c38;
+  display: flex;
+  justify-content: center;
+
+  @include media(desktop) {
+    padding-bottom: 59px;
+    font-size: 36px;
+    line-height: 1.22;
   }
 }
