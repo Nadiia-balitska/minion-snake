@@ -1,38 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Minion Snake</title>
+    
+    <script type="module" crossorigin src="/minion-snake/commonHelpers.js"></script>
+    <link rel="stylesheet" href="/minion-snake/assets/index-afed0f01.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <title>Minion Snake</title>
-  
-  <script type="module" crossorigin src="/minion-snake/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/minion-snake/assets/index-6319c470.css">
-</head>
+  <body>
+    <header class="header">
+  <div class="header-desktop">
+    <a href="./index.html" class="header-logo-link">
+      <img src="data:image/png;base64,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" alt="logo" width="91" height="40"
+    /></a>
+    <nav>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#benefits">Benefits</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#gallery">Gallery</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#play">How to play</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#about">About The Game</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#faq">FAQ</a>
+        </li>
+        <li class="navigation-item">
+          <a href="./index.html#advantages">Advantages</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-<body>
-  <header class="header">
-  <nav class="nav"></nav>
+  <!-------------- Mobile menu ----------->
+  <div class="header-mobile">
+    <a href="./index.html">
+      <img src="data:image/png;base64,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" alt="logo" width="91" height="40" />
+    </a>
+    <button
+      class="menu-toggle js-open-menu is-open"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg width="24" height="24">
+        <use href="/minion-snake/assets/sprite-65958456.svg#menu"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <div class="close-menu">
+      <button class="modal-btn menu-toggle js-close-menu" type="button">
+        <svg class="modal-icon" width="24" height="24">
+          <use href="/minion-snake/assets/sprite-65958456.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="navigation-burger">
+      <ul class="mobile-menu list">
+        <li class="navigation-burger-item">
+          <a href="./index.html" class="link">Home</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#about" class="link">About the game</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#gallery" class="link">Gallery</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#benefits" class="link">Benefits</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#advantages" class="link">Advantages</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#play" class="link">How to play</a>
+        </li>
+        <li class="navigation-burger-item">
+          <a href="./index.html#faq" class="link">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-  
-  
-  
-  <section>
+    <main>
+      <section id="hero">
+  <div class="hero-container">
+    <div class="hero-wrap">
+      <div class="hero-left-side">
+        <h1 class="hero-title">Minion <span class="hero-span">Snake</span></h1>
+        <p class="hero-text">
+          Avoid all obstacles and kill the boss with your snake minions
+        </p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.astrogames.minnionsnake"
+          class="hero-link"
+          target="_blank"
+        >
+          <picture>
+            <source
+              srcset="/minion-snake/assets/googlePlay-0d4dca5e.png "
+              media="(min-width:1440px)"
+            />
+            <source
+              srcset="../img/hero/play-mobile.png"
+              media="(max-width:320px)"
+            />
+            <img
+              src="/minion-snake/assets/googlePlay-0d4dca5e.png"
+              alt="Link to Google Play"
+              class="hero-google"
+              width="227"
+              height="80"
+            />
+          </picture>
+          <!-- <img
+            src="/img/hero/googlePlay.png"
+            alt="Link to Google Play"
+            class="hero-google-active"
+            width="227"
+            height="80"
+          /> -->
+        </a>
+      </div>
+
+      <div class="hero-right">
+        <img
+          src="/minion-snake/assets/minion-517c74bf.png"
+          alt="Alice in Puzzeland"
+          class="hero-img"
+          width="480"
+          height="480"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="benefits">
+  <div class="benefits">
+    <div class="blue-color-bg"></div>
+    <h2 class="title">Benefits</h2>
+    <ul class="benefits_list">
+      <li>
+        <img src="/minion-snake/assets/point-74a19b99.png" alt="score" />
+      </li>
+      <li>
+        <img src="/minion-snake/assets/reviews-fbb8af4b.png" alt="downloads" />
+      </li>
+      <li>
+        <img src="/minion-snake/assets/downloads-e8828796.png" alt="reviews" />
+      </li>
+      <li>
+        <img src="/minion-snake/assets/online-aeb0cf91.png" alt="choice" />
+      </li>
+    </ul>
+  </div>
+</section>
+
+      
+      <section>
   <div class="container"></div>
 </section>
 
-  
-  
-  
-  
-  <footer class="footer">
+      
+      
+      
+      
+    </main>
+    <footer class="footer">
   <div class="container">
     <ul class="nav-list">
       <li class="nav-item">
@@ -48,7 +203,6 @@
 </footer>
 
 
-  
-</body>
-
+    
+  </body>
 </html>
