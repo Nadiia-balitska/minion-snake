@@ -6,16 +6,18 @@
   gap: 28px;
 }
 .benefits {
-  //   position: relative;
-  //   top: 750px;
   max-width: 320px;
-  //   margin: 0 auto;
   padding: 40px 14px;
   border: 2px solid #003c38;
   border-radius: 32px;
 
   box-shadow: 0 4px 8px 0 rgba(0, 60, 56, 0.08);
   background: linear-gradient(180deg, #c3f8fe 0%, #00717c 100%);
+}
+.bg-color {
+  max-width: 320px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #0a1a5a 50%, #ffffff 50%);
 }
 
 @media screen and (min-width: 1440px) {
@@ -30,5 +32,8 @@
     max-width: 1440px;
     padding: 80px 60px;
     // top: 960px;
+  }
+  .bg-color {
+    max-width: 1440px;
   }
 }
