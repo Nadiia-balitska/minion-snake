@@ -1,0 +1,34 @@
+.warning-message {
+  background-color: #ec662c;
+  box-shadow: 0px 4px 8px 0px #ec662c24;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  @include media(desktop) {
+    padding: 50px 81px 50px 53px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.icon-warning {
+  flex-shrink: 0;
+}
+
+.warning-message-text {
+  font-size: 13px;
+  line-height: 1.84;
+  font-weight: 500;
+  @include media(desktop) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
