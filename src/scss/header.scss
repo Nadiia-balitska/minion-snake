@@ -1,15 +1,12 @@
 .header {
   border-bottom: 1px solid #e9e8e4;
   margin: 0 auto;
-  // position: fixed;
   justify-content: center;
   align-items: center;
   display: flex;
-  // z-index: 999;
 }
 
 .header-desktop {
-  // position: fixed;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -106,6 +103,7 @@
   margin: 0 auto;
 
   display: flex;
+
   flex-direction: column;
   width: 100vw;
   height: 100%;
@@ -118,14 +116,12 @@
 }
 
 .menu-container.is-open {
-  width: 320px;
+  width: 100%;
   height: 568px;
 
   transform: translateX(0);
 }
 
-.modal-btn {
-}
 .close-menu {
   display: flex;
   justify-content: end;
