@@ -1,7 +1,5 @@
 .footer {
-  background-color: #2a2a2a;
   color: #ffffff;
-  height: 248px;
   .container {
     display: flex;
     flex-direction: column;
@@ -9,19 +7,22 @@
     text-align: center;
     gap: 40px;
     height: 100%;
+    padding-top: 48px;
+    padding-bottom: 60px;
+    background-color: #2a2a2a;
     @include media(desktop) {
       flex-direction: row;
       text-align: left;
+      padding-top: 63px;
       padding-right: 101px;
       padding-left: 101px;
-      padding-bottom: 60px;
     }
   }
 }
 
 .footer-text {
   line-height: 1.57;
-  font-size: 14px;
+  font-size: 12px;
   @include media(desktop) {
     font-size: 16px;
     line-height: 1.5;
