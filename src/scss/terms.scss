@@ -115,6 +115,9 @@
 .introduction-desc.terms-container {
   padding-left: 14px;
   padding-right: 14px;
+  @include media(desktop) {
+    padding: 40px 56px;
+  }
 }
 
 .updates {
