@@ -1,0 +1,138 @@
+.main {
+  color: #003c38;
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+.main .terms-container {
+  padding: 40px 14px;
+  @include media(desktop) {
+    padding: 56px 60px;
+  }
+}
+
+.license.terms-container,
+.termination.terms-container,
+.description.terms-container {
+  padding-bottom: 0;
+}
+
+.introduction {
+  position: relative;
+  color: #ffffff;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 800px;
+    z-index: -1;
+    background: linear-gradient(180deg, #0139c8 0%, #041b5e 100%),
+      linear-gradient(
+        180deg,
+        color(display-p3 0.082 0.22 0.753) 0%,
+        color(display-p3 0.039 0.102 0.353) 100%
+      );
+    @include media(desktop) {
+      width: 1439px;
+      height: 600px;
+    }
+  }
+}
+
+.main-title-terms {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.25;
+  width: 260px;
+  text-align: center;
+  margin: 0 auto 32px;
+  @include media(desktop) {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
+
+.title.title-terms {
+  width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 24px;
+  @include media(desktop) {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+}
+
+.title-introduction {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: Poppins;
+  letter-spacing: -0.04em;
+
+  @include media(desktop) {
+    font-size: 36px;
+    line-height: 1.22;
+    margin-bottom: 40px;
+    letter-spacing: 0;
+  }
+}
+
+.introduction-text {
+  margin: 0 auto;
+  letter-spacing: -0.04em;
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0;
+  }
+}
+
+.introduction-desc {
+  background: linear-gradient(180.99deg, #b5faff 0.85%, #00737e 278.34%),
+    linear-gradient(
+      180.99deg,
+      color(display-p3 0.765 0.973 0.996) 0.85%,
+      color(display-p3 0 0.443 0.486) 278.34%
+    );
+  border: 2px solid #003c38;
+  box-shadow: 0px 4px 8px 0px #003c3814;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #003c38;
+  @include media(desktop) {
+    border-width: 4px;
+  }
+}
+.introduction-desc.terms-container {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.updates {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -18.5px;
+    left: 0;
+    width: 320px;
+    height: 37px;
+    background-image: url('../img/privacyTerms/minions-mob.png');
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+    @include media(desktop) {
+      width: 1440px;
+      background-image: url('../img/privacyTerms/minions.png');
+    }
+  }
+}
