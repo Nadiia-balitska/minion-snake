@@ -1,7 +1,7 @@
 .warning-message {
   background-color: #ec662c;
   box-shadow: 0px 4px 8px 0px #ec662c24;
-  border: 2px solid #ff0000;
+  border: 1px solid #ff0000;
   border-radius: 12px;
   margin: 0 auto;
   padding: 24px;
@@ -10,6 +10,7 @@
   align-items: center;
   gap: 18px;
   @include media(desktop) {
+    border-width: 2px;
     padding: 50px 81px 50px 53px;
   }
 
