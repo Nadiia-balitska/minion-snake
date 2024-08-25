@@ -1,8 +1,14 @@
 .gallery {
   width: 100%;
+  overflow: hidden;
 }
 .swiper-pagination-bullet {
   background-color: #ec662c;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .gallery-container {
@@ -11,12 +17,17 @@
 
 .gallery-img {
   display: block;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1440px) {
   .gallery-img {
     display: none;
+  }
+  .container {
+    width: 100%;
   }
 }
 
